@@ -59,23 +59,27 @@ def Play ( ) :
                 print(f'you Win,computer select paper and you selected {user_choice}')
 
             else :
-                print('tie,you both select same')
+                print('tie,you both selected same')
     else:
             pass
+    
 
 
 def Exit ( ) :
     sys.exit("See you Again")
 
 
-print("\n\n \t\t ******************Rock , Paper  , Scissors Game Start ***********************\n")
+print("\n\n \t\t ******************Rock , Paper  , Scissors Game Start ***********************")
 
-PlayOrQuit = int ( input ("Press 1 for Play and 0 for Exit :"))
-
-if (PlayOrQuit == 1) :
-    Play()
-if (PlayOrQuit==0):
-    Exit()
+while(True):
+    PlayOrQuit = int ( input ("\n \t\t Press 1 for Play and 0 for Exit :"))
+    print("\n")
+    if (PlayOrQuit == 1) :
+            Play()
+    if (PlayOrQuit==0):
+        Exit()
+    else :
+        print("please enter 1 or 0 ")
 
 
 '''
@@ -87,5 +91,8 @@ The rules state that rock smashes scissors, scissors cuts paper, and paper cover
 
 What Customization we can do further ????????????????
 
+--> you can add try , except(i.e catch) to avoid error if user enters string
+
+--> you can give chance to user : how many choices they have and count their wins.Whoever won more time than other will be the final winner.
 
 '''
